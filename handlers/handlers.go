@@ -611,7 +611,7 @@ func getUserInfoFromOpenStax(client *http.Client, user *structs.User, customClai
 	user.Email = oxUser.Email
 	user.Name = oxUser.Name
 	user.Username = oxUser.Username
-	user.ID = oxUser.ID
+	user.DBID = oxUser.ID
 	user.PrepareUserData()
 	return nil
 }
@@ -676,7 +676,7 @@ func getUserInfoFromGitHub(client *http.Client, user *structs.User, customClaims
 	user.Email = ghUser.Email
 	user.Name = ghUser.Name
 	user.Username = ghUser.Username
-	user.ID = ghUser.ID
+	user.DBID = ghUser.ID
 	// user = &ghUser.User
 
 	log.Debug("getUserInfoFromGitHub")

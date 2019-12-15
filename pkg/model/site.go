@@ -29,7 +29,7 @@ func PutSite(s structs.Site) error {
 			s.CreatedOn = curs.CreatedOn
 		} else {
 			id, _ := b.NextSequence()
-			s.ID = int(id)
+			s.DBID = int(id)
 			s.CreatedOn = s.LastUpdate
 		}
 

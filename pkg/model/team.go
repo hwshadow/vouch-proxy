@@ -29,7 +29,7 @@ func PutTeam(t structs.Team) error {
 				t.CreatedOn = curt.CreatedOn
 			} else {
 				id, _ := b.NextSequence()
-				t.ID = int(id)
+				t.DBID = int(id)
 				t.CreatedOn = t.LastUpdate
 			}
 

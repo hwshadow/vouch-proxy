@@ -38,7 +38,7 @@ func PutUser(u structs.User) error {
 		} else {
 			u.CreatedOn = u.LastUpdate
 			id, _ := b.NextSequence()
-			u.ID = int(id)
+			u.DBID = int(id)
 			log.Debugf("new user.. setting created on to %v", u.CreatedOn)
 		}
 
